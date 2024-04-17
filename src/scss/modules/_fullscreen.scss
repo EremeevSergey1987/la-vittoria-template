@@ -1,0 +1,13 @@
+@use "../tools/mixins/breakpoints" as b;
+
+[data-fullscreen] {
+	min-height: 100vh;
+
+	[class^="page--"] & {
+		min-height: calc(var(--vh, 1vh) * 100);
+
+		@include b.smalltablet {
+			transition: height 0.2s;
+		};
+	}
+}

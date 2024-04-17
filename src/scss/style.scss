@@ -1,0 +1,10 @@
+@use "sass:meta";
+@use "exports/extends";
+@use "exports/forwards";
+
+* {
+	@extend %taphighlight;
+}
+
+// * Подключение стилей для IE
+@include meta.load-css("modules/iestyles.scss");

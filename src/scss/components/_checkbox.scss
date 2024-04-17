@@ -1,0 +1,92 @@
+@use "../exports/functions" as f;
+@use "../exports/mixins" as mix;
+@use "sass:math";
+
+$checksize: 20px;
+
+[data-checkbox] {
+	position: relative;
+	@include mix.adaptiveValue($checksize, $checksize * 0.8);
+	overflow: hidden;
+	cursor: pointer;
+
+	[type="checkbox"] {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		clip: rect(0 0 0 0);
+
+		@include mix.focused {
+			&:not(:disabled) {
+				+ span {
+					&::before {
+						box-shadow: inset 0 0 f.em(5px, $checksize) #000;
+					}
+				}
+
+				&:checked {
+					+ span {
+						&::before {
+							box-shadow: inset 0 0 f.em(5px, $checksize) #fff;
+						}
+					}
+				}
+			}
+		}
+
+		+ span {
+			&:before {
+				overflow: hidden;
+			}
+		}
+
+		&:checked {
+			+ span {
+				&:before {
+					background: #000000
+						url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path class="checkmark" fill="%23ffffff" d="M20.61 5.207a1 1 0 0 1 .183 1.403l-10 13a1 1 0 0 1-1.5.097l-5-5a1 1 0 0 1 1.414-1.414l4.195 4.195L19.207 5.39a1 1 0 0 1 1.403-.183Z" clip-rule="evenodd"/></svg>')
+						center center / contain no-repeat;
+					// background: #000000
+					// 	url('data:image/svg+xml;utf8,<svg width="1" height="1" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.858747 0.216966C0.863088 0.220302 0.866729 0.224461 0.869462 0.229205C0.872195 0.233949 0.873966 0.239186 0.874674 0.244615C0.875383 0.250044 0.875014 0.255559 0.873589 0.260846C0.872165 0.266132 0.869712 0.271086 0.866372 0.275424L0.449705 0.817091C0.44609 0.821789 0.441514 0.825662 0.436283 0.828451C0.431052 0.83124 0.425286 0.83288 0.41937 0.833263C0.413454 0.833645 0.407525 0.832761 0.401978 0.830669C0.396431 0.828578 0.391395 0.825326 0.387205 0.821132L0.178872 0.612799C0.171282 0.604941 0.167082 0.594416 0.167177 0.583491C0.167272 0.572566 0.171654 0.562115 0.179379 0.55439C0.187105 0.546665 0.197555 0.542283 0.20848 0.542188C0.219405 0.542093 0.22993 0.546292 0.237788 0.553882L0.41258 0.728674L0.800288 0.224591C0.803624 0.220249 0.807783 0.216608 0.812528 0.213875C0.817272 0.211142 0.822508 0.209371 0.827937 0.208663C0.833366 0.207955 0.838882 0.208324 0.844168 0.209748C0.849455 0.211173 0.854409 0.213625 0.858747 0.216966Z" fill="%23ffffff"/></svg>')
+					// 	center center / contain no-repeat;
+				}
+			}
+
+			&:disabled {
+				+ span {
+					&:before {
+						background-color: #c0c0c0;
+						background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path class="checkmark" fill="%23a7a7a7" d="M20.61 5.207a1 1 0 0 1 .183 1.403l-10 13a1 1 0 0 1-1.5.097l-5-5a1 1 0 0 1 1.414-1.414l4.195 4.195L19.207 5.39a1 1 0 0 1 1.403-.183Z" clip-rule="evenodd"/></svg>');
+						// background-image: url('data:image/svg+xml;utf8,<svg width="1" height="1" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.858747 0.216966C0.863088 0.220302 0.866729 0.224461 0.869462 0.229205C0.872195 0.233949 0.873966 0.239186 0.874674 0.244615C0.875383 0.250044 0.875014 0.255559 0.873589 0.260846C0.872165 0.266132 0.869712 0.271086 0.866372 0.275424L0.449705 0.817091C0.44609 0.821789 0.441514 0.825662 0.436283 0.828451C0.431052 0.83124 0.425286 0.83288 0.41937 0.833263C0.413454 0.833645 0.407525 0.832761 0.401978 0.830669C0.396431 0.828578 0.391395 0.825326 0.387205 0.821132L0.178872 0.612799C0.171282 0.604941 0.167082 0.594416 0.167177 0.583491C0.167272 0.572566 0.171654 0.562115 0.179379 0.55439C0.187105 0.546665 0.197555 0.542283 0.20848 0.542188C0.219405 0.542093 0.22993 0.546292 0.237788 0.553882L0.41258 0.728674L0.800288 0.224591C0.803624 0.220249 0.807783 0.216608 0.812528 0.213875C0.817272 0.211142 0.822508 0.209371 0.827937 0.208663C0.833366 0.207955 0.838882 0.208324 0.844168 0.209748C0.849455 0.211173 0.854409 0.213625 0.858747 0.216966Z" fill="%23a7a7a7"/></svg>');
+					}
+				}
+			}
+		}
+
+		&:disabled {
+			+ span {
+				&:before {
+					background-color: #c0c0c0;
+				}
+			}
+		}
+	}
+
+	span {
+		position: relative;
+		@include mix.iflex(null, center);
+		gap: f.em(10px, $checksize);
+
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 f.em($checksize, $checksize);
+			width: f.em($checksize, $checksize);
+			height: f.em($checksize, $checksize);
+			border: 1px solid #a7a9ac;
+		}
+	}
+}

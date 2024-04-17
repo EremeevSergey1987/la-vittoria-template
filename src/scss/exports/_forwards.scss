@@ -1,0 +1,17 @@
+// ? Подключение кастомного обнуления
+@forward "../tools/zeroing/nullstyle";
+
+// ? Подключение шрифтов
+// @forward "../components/fonts";
+
+// ? Подключение стилей body
+@forward "../blocks/layot/body";
+
+// ? Подключение стилей шапки
+@forward '../blocks/layot/header';
+
+// ? Подключение стилей main
+@forward '../blocks/layot/main';
+
+// ? Подключение стилей подвала
+@forward '../blocks/layot/footer';

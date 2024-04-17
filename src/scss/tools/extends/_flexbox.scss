@@ -1,0 +1,22 @@
+@use "../mixins/flexbox" as mix;
+
+// Флексы
+%centerflex {
+	@include mix.flex(center);
+}
+
+%icenterflex {
+	@include mix.iflex(center);
+}
+
+%centercolflex {
+	@include mix.flexcolumn(center);
+}
+
+%icentercolflex {
+	@include mix.iflexcolumn(center);
+}
+
+%columnflex {
+	@include mix.columnflex;
+}
