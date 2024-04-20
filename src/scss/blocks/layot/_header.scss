@@ -1,9 +1,7 @@
 // ? Подключение бургерного меню
 // @use '../../plugins/menu';
-@use "../../exports/vars" as vars;
 
 .header {
-  width: vars.$container;
   height: 60px;
   margin: 0 auto;
   border: 1px solid #0aff00;

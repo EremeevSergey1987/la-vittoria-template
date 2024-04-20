@@ -8,7 +8,10 @@ html {
 	@extend %smoothscroll;
 }
 
+
+
 .wrapper {
+	min-width: vars.$container;
 	min-height: 100%;
 	@include mix.columnflex;
 	overflow-x: hidden;
