@@ -1,9 +1,8 @@
-
+@use "../../exports/vars" as vars;
 .main {
 	flex: 1 1 auto;
-	max-width: 1000px;
+	width: vars.$container;
 	margin: 0 auto;
 	border: 1px solid red;
 	padding: 5px;
-	background-color: $color_page;
 }

@@ -1,5 +1,6 @@
+@use "../../exports/vars" as vars;
 .footer {
-  width: 1000px;
+  width: vars.$container;
   height: 30px;
   margin: 0 auto;
   border: 1px solid #002aff;

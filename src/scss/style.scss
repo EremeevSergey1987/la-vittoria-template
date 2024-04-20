@@ -6,12 +6,5 @@
 	@extend %taphighlight;
 }
 
-body{
-	background-color: #969696;
-}
-.wrapper{
-	border: 2px solid red;
-}
-
 // * Подключение стилей для IE
 @include meta.load-css("modules/iestyles.scss");

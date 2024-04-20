@@ -1,10 +1,10 @@
 // ? Подключение бургерного меню
 // @use '../../plugins/menu';
+@use "../../exports/vars" as vars;
 
 .header {
-  width: 1000px;
+  width: vars.$container;
   height: 60px;
   margin: 0 auto;
-  background-color: $color_page;
   border: 1px solid #0aff00;
 }
