@@ -1,8 +1,24 @@
 // ? Подключение бургерного меню
 // @use '../../plugins/menu';
+@use '../../exports/vars' as vars;
 
 .header {
   height: 60px;
-  margin: 0 auto;
-  border: 1px solid #0aff00;
+  position: fixed;
+  padding: 5px;
+  width: 100%;
+  background-color: vars.$colorGreen;
+  menu ul{
+    display: flex;
+    li {
+      a{
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        padding: 19px;
+        display: block;
+        color: vars.$linksTopMenu;
+      }
+    }
+  }
 }
