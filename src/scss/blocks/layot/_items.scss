@@ -9,3 +9,13 @@
     background-color: #0698a5;
   }
 }
+@media (max-width: 600px){
+  .items__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 500px){
+  .items__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
