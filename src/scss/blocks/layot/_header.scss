@@ -3,11 +3,21 @@
 @use '../../exports/vars' as vars;
 
 .header {
-
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   background-color: vars.$colorGreen;
+  .logo{
+    width: 300px;
+    border: 1px solid red;
+  }
+  .right{
+    width: 300px;
+    border: 1px solid red;
+  }
   menu ul{
+    border: 1px solid red;
     display: flex;
     li {
       a{
