@@ -1,4 +1,5 @@
 @use "../../exports/functions" as f;
+@use "../../components/_fonts" as founts;
 @use "../../exports/mixins" as mix;
 @use "../../exports/vars" as vars;
 @use "../../tools/extends/scroll";
@@ -8,11 +9,15 @@ html {
 	@extend %smoothscroll;
 }
 
+body{
+	font:16px 'Geometria', Arial, Helvetica, sans-serif;
+}
+
+
 .wrapper {
 	min-height: 100%;
 	@include mix.columnflex;
 	overflow-x: hidden;
-	border:1px solid red;
 	.relevant{
 		width: 100%;
 		padding: 30px;

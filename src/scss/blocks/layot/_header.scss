@@ -3,21 +3,24 @@
 @use '../../exports/vars' as vars;
 
 .header {
-  height: 60px;
+
   position: fixed;
-  padding: 5px;
   width: 100%;
   background-color: vars.$colorGreen;
   menu ul{
     display: flex;
     li {
       a{
-        font-weight: bold;
         text-decoration: none;
         border-bottom: 1px solid transparent;
         padding: 19px;
         display: block;
         color: vars.$linksTopMenu;
+        line-height: 25px;
+        margin: 0;
+      }
+      a:hover{
+        background-color: vars.$colorLink;
       }
     }
   }
