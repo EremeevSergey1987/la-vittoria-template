@@ -1,5 +1,4 @@
 @use "../../exports/functions" as f;
-@use "../../components/_fonts" as founts;
 @use "../../exports/mixins" as mix;
 @use "../../exports/vars" as vars;
 @use "../../tools/extends/scroll";
@@ -11,6 +10,11 @@ html {
 
 body{
 	font:16px 'Geometria', Arial, Helvetica, sans-serif;
+}
+
+
+body{
+	font-family: "Geometria", sans-serif;
 }
 
 
