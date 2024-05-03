@@ -53,7 +53,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const otherTasks = gulp.parallel(vendorcss, vendorjs, vendorfonts, vendorimages, vendoraudio, vendorvideo);
 
 //Основные параллельные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, otherTasks, html, scss, js, images));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, otherTasks, html, scss, js, images, svgSprive));
 
 //Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gitignore, gulp.parallel(watcher, server));

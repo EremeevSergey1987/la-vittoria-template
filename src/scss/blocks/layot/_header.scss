@@ -11,14 +11,21 @@
   .logo{
     width: 300px;
     border: 1px solid red;
+    a{
+      svg{
+        fill: vars.$colorLink;
+        height: 20px;
+      }
+    }
   }
   .right{
     width: 300px;
     border: 1px solid red;
   }
-  menu ul{
+  menu{
     border: 1px solid red;
     display: flex;
+    list-style-type: none;
     li {
       a{
         text-decoration: none;
