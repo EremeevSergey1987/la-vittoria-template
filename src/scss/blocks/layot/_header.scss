@@ -44,11 +44,10 @@
     flex-wrap: wrap;
     align-items: center;
     .enter{
-      border: 1px solid red;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      margin-left: 60px;
+      margin-left: 100px;
       svg{
         width: 40px;
         height: 40px;
@@ -57,7 +56,9 @@
       }
     }
     form{
-      border: 1px solid red;
+      label{
+        display: none;
+      }
       display: flex;
       height: 30px;
       width: 60px;
