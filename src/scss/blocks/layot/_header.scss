@@ -32,9 +32,24 @@
         justify-content: flex-start;
         position: fixed;
         border: 3px solid #cfa189;
+        width: 60%;
         li {
+          font-size: 16px;
+          :hover{
+            background-color: transparent;
+          }
           a{
             color: vars.$colorLink;
+            background-color: #F0F0EE;
+            line-height: 18px;
+            padding: 5px 0 5px 8px;
+            margin: 8px 8px 5px 8px;
+            span{
+              padding: 8px 8px;
+              font-size: 12px;
+              color: white;
+              background-color: #cfa189;
+            }
           }
         }
       }
