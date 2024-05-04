@@ -118,10 +118,12 @@ description: "© Binarion"
 <script>
 	function myFunction() {
 		document.getElementById('myDropdown').style.display = "flex"
+		document.getElementById('myDropdownCatalog').style.backgroundColor = "#cfa189"
 	}
 	window.onclick = function(event) {
 		if (!event.target.matches('.dropbtn')) {
 			document.getElementById('myDropdown').style.display = "none"
+			document.getElementById('myDropdownCatalog').style.backgroundColor = "transparent"
 		}
 	}
 </script>
