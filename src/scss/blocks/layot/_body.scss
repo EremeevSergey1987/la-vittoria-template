@@ -27,9 +27,26 @@ body{
 		padding: 30px;
 		background-color: #cfa189;
 		margin: 10px 0;
+		&__container{
+			ul{
+				display: flex;
+				justify-content: space-between;
+				margin-top: 30px;
+				li{
+					text-align: center;
+					width: 150px;
+					height: 150px;
+					img{
+						width: 150px;
+						height: 150px;
+						border-radius: 100%;
+					}
+				}
+			}
+		}
 	}
 	.relevant.main{
-		margin-top: 60px;
+		margin-top: 59px;
 		height:200px;
 	}
 

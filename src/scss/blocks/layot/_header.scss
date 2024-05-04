@@ -6,11 +6,12 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
+  flex-wrap: wrap;
+  align-items: center;
   width: 100%;
   background-color: vars.$colorGreen;
   .logo{
-    width: 300px;
-    border: 1px solid red;
+    width: 20%;
     a{
       svg{
         fill: vars.$colorLink;
@@ -18,22 +19,17 @@
       }
     }
   }
-  .right{
-    width: 300px;
-    border: 1px solid red;
-  }
   menu{
-    border: 1px solid red;
     display: flex;
     list-style-type: none;
+    width: 55%;
     li {
       a{
         text-decoration: none;
         border-bottom: 1px solid transparent;
-        padding: 19px;
+        padding:19px;
         display: block;
         color: vars.$linksTopMenu;
-        line-height: 25px;
         margin: 0;
       }
       a:hover{
@@ -41,4 +37,68 @@
       }
     }
   }
+
+.right{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .enter{
+      border: 1px solid red;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 60px;
+      svg{
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+        fill: vars.$colorLink;
+      }
+    }
+    form{
+      border: 1px solid red;
+      display: flex;
+      height: 30px;
+      width: 60px;
+      input{
+        margin-left: 30px;
+        background-color: transparent;
+        width: 50px;
+        height: 28px;
+        color: #ffffff;
+        border-bottom: 1px solid vars.$colorLink;
+      }
+      button{
+        width: 30px;
+        border: none;
+        background-color: transparent;
+        svg{
+          width: 40px;
+          height: 40px;
+          margin-left: 10px;
+          fill: vars.$colorLink;
+        }
+      }
+    }
+    a{
+      display: flex;
+      svg{
+        fill: vars.$colorLink;
+        width: 50px;
+        height: 50px;
+      }
+      p{
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        margin-left: -49px;
+        padding-top: 15px;
+        width: 50px;
+        height: 35px;
+      }
+    }
+
+  }
+
 }
