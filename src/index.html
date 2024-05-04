@@ -115,5 +115,14 @@ description: "© Binarion"
 	</div>
 	@@include("html/blocks/layot/js.html", {filename: "script.min"})
 </body>
-
+<script>
+	function myFunction() {
+		document.getElementById('myDropdown').style.display = "flex"
+	}
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+			document.getElementById('myDropdown').style.display = "none"
+		}
+	}
+</script>
 </html>
