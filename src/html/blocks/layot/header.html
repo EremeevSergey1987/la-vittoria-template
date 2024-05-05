@@ -8,12 +8,14 @@
 
 
     <menu>
-            <li><a onclick="myFunction(); return false;" id="myDropdownCatalog" class="dropbtn" href="#">Каталог</a>
-                <ul id="myDropdown" class="dropdown-content">
+            <li>
+                <a onclick="myFunction(); return false;" id="myDropdown" class="dropbtn" href="#">Каталог</a>
+                <ul id="catalogMain" class="dropdown-content" >
                     <li id="bx_1847241719_75"><a href="/catalog/platya/">Платья <span>4553</span></a></li>
                     <li id="bx_1847241719_81"><a href="/catalog/bluzy/">Блузы <span>3516</span></a></li>
-                    <li id="bx_1847241719_76" class="dcjq-parent-li"><a href="/catalog/aksessuary/" class="dcjq-parent">Аксессуары <span>3686</span></a>
-                        <ul class="dropdown-menu" style="display: none;">
+                    <li id="bx_1847241719_76" class="dcjq-parent-li">
+                        <a onclick="Dropdown('SubCatalog', 'SubMenuCatalog'); return false;" id="SubMenuCatalog" class="dropbtn" href="#">Аксессуары <span>3686</span></a>
+                        <ul id="SubCatalog" class="dropdown-content" style="display: none;">
                             <li id="bx_1847241719_77"><a href="/catalog/bizhuteriya/">Бижутерия. <span>2128</span></a></li>
                             <li id="bx_1847241719_78"><a href="/catalog/remni/">Ремни <span>216</span></a></li>
                             <li id="bx_1847241719_79"><a href="/catalog/sumki/">Сумки <span>725</span></a></li>
