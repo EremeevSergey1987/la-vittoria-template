@@ -104,28 +104,25 @@ description: "© Binarion"
 
 
 		</div>
-		@@include("html/navigation/menu.html", {})
 		@@include("html/blocks/layot/footer.html", {})
 	</div>
 	@@include("html/blocks/layot/js.html", {filename: "script.min"})
 </body>
 <script>
-    function drop($id, $btncat) {
-		const element = document.getElementById($id);
+    function drop(id, btnSubCatId) {
+		const element = document.getElementById(id);
 		const styles = window.getComputedStyle(element);
-		if(styles.display === 'none'){
-			element.style.display = "flex";
-		}
-		else {
-			element.style.display = "none";
-		}
-		const dropDown = document.getElementById($id);
-		const btncat = document.getElementById($btncat);
+		const dropDown = document.getElementById(id);
+		const btnSubCat = document.getElementById(btnSubCatId);
+
+		if(styles.display === 'none'){element.style.display = "flex";}
+		else {element.style.display = "none";}
+
 		document.addEventListener('click', (e) => {
 			const isOutsideClick = !dropDown.contains(e.target);
-			const btncatClick = !btncat.contains(e.target);
+			const btnCatClick = !btnSubCat.contains(e.target);
 			if ( isOutsideClick ) {
-				if( btncatClick ) {
+				if( btnCatClick ) {
 					element.style.display = "none";
 				}
 			}
