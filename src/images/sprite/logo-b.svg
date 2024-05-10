@@ -1,15 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="55.717mm" height="5.535mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="45.717mm" height="5.535mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 5571.7 553.5">
  <g id="Слой_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_1854705107632">
-   <g>
-    <g>
-     <path fill="#E3B196" d="M72.43 38.75c70.19,0 159.11,6.28 159.11,158.39l0 222.82 0 22.3c0,28.43 7.75,116.01 73.91,123.96l-102.24 0c-70.19,0 -159.11,-6.28 -159.11,-158.39 0,-120.41 0,-152.19 0,-272.6 0,-70.94 -27.72,-96.48 -61.61,-96.48l89.94 0z"/>
-     <path fill="#E3B196" d="M501.26 38.75c70.18,0 161.43,6.28 217.54,158.39 44.43,120.41 56.15,152.18 100.57,272.6 26.17,70.94 63.32,96.48 97.2,96.48l-89.94 0c-70.19,0 -161.43,-6.28 -217.55,-158.39 -44.42,-120.41 -56.14,-152.19 -100.57,-272.6 -26.16,-70.94 -63.31,-96.48 -97.2,-96.48l89.95 0z"/>
-    </g>
-    <path fill="#E3B196" d="M428.53 566.22c66.56,0 120.54,-53.98 120.54,-120.54 0,-66.56 -53.98,-120.54 -120.54,-120.54 -66.56,0 -120.54,53.98 -120.54,120.54 0,66.56 53.98,120.54 120.54,120.54z"/>
-   </g>
+  <metadata />
+  <g>
    <g>
     <polygon fill="#00505D" points="1510.93,48.88 1278.77,566.22 1182.14,566.22 950.14,48.88 945.72,39.03 956.53,39.03 1050.75,39.03 1055.28,39.03 1057.14,43.17 1259.75,494.63 1461.57,43.17 1463.43,38.99 1467.96,38.99 1504.54,38.99 1515.36,38.99 "/>
     <polygon fill="#00505D" points="1751.8,39 1751.8,566.22 1854.66,566.22 1854.66,38.99 "/>
