@@ -110,15 +110,21 @@ description: "© Binarion"
 		const dropDown = document.getElementById(id);
 		const btnSubCat = document.getElementById(btnSubCatId);
 
-		if(styles.display === 'none'){element.style.display = "flex";}
-		else {element.style.display = "none";}
-
+		if(styles.visibility === 'hidden'){
+			element.classList.remove('hidden');
+			element.classList.toggle('visible');
+		}
+		else {
+			element.classList.remove('visible');
+			element.classList.toggle('hidden');
+		}
 		document.addEventListener('click', (e) => {
 			const isOutsideClick = !dropDown.contains(e.target);
 			const btnCatClick = !btnSubCat.contains(e.target);
 			if ( isOutsideClick ) {
 				if( btnCatClick ) {
-					element.style.display = "none";
+					element.classList.remove('visible');
+					element.classList.toggle('hidden');
 				}
 			}
 		});

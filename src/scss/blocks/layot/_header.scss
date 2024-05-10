@@ -25,7 +25,10 @@
     width: 55%;
     li {
       ul{
-        display: none;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
         background-color: white;
         flex-direction: row;
         flex-wrap: wrap;
@@ -36,15 +39,24 @@
         li {
           font-size: 16px;
           :hover{
-            background-color: transparent;
+            background-color: white;
           }
           ul {
-            border: 5px solid red !important;
-            width: 30%;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid #cfa189;
+            width:auto;
+            li{
+              border: 1px solid red;
+            }
+          }
+          ul:hover{
+            background-color: white;
           }
           a{
             color: vars.$colorLink;
             background-color: #F0F0EE;
+
             line-height: 18px;
             padding: 5px 0 5px 8px;
             margin: 8px 8px 5px 8px;
@@ -56,6 +68,10 @@
             }
           }
         }
+      }
+      ul.visible{
+        visibility: visible;
+        opacity: 1;
       }
 
       a{
