@@ -108,10 +108,14 @@ description: "© Binarion"
 	const logoBig = document.querySelector('.logo__big')
 	const logoSmall = document.querySelector('.logo__small')
 	logoBig.addEventListener('mouseenter', function(){
+		if(!logoSmall.classList.contains('hover-logo')){
 			logoSmall.classList.add('hover-logo')
-	})
-	logoBig.addEventListener('mouseleave', function(){
-		logoSmall.classList.remove('hover-logo')
+		}
+		else{
+			logoBig.addEventListener('mouseleave', function(){
+				logoSmall.classList.remove('hover-logo')
+			})
+		}
 	})
 </script>
 
