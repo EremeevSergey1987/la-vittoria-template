@@ -105,12 +105,16 @@ description: "© Binarion"
 </body>
 
 <script>
-	function logo(){
-		const logo = document.getElementById()
-		logo.addEventListener('mouseover', function () {
-			alert('курсор вошёл в границы элемента!')
-		})
-	}
+	const logoBig = document.getElementById('logo')
+	const logoSmallId = document.getElementById('logoSmall')
+
+	logoBig.addEventListener('mouseenter', function(){
+		logoSmallId.classList.toggle('hover-logo')
+	}, false)
+
+	logoBig.addEventListener('mouseleave', function(){
+		logoSmallId.classList.remove('hover-logo')
+	}, false)
 </script>
 
 <script>

@@ -17,11 +17,17 @@
     width: 20%;
       a.logo__small svg{
         fill: vars.$colorLink;
+        transition: fill .9s ease;
         height: 50px;
         width: 40px;
 
-
       }
+
+    a.logo__small.hover-logo svg{
+      transition: fill .9s ease;
+      fill: rgb(0, 0, 0);
+    }
+
       a.logo__big svg{
         fill: white;
         height: 50px;
