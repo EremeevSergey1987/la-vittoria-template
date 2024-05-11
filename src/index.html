@@ -105,17 +105,17 @@ description: "© Binarion"
 </body>
 
 <script>
-	const logoBig = document.getElementById('logo')
-	const logoSmallId = document.getElementById('logoSmall')
-
+	const logoBig = document.querySelector('.logo__big')
+	const logoSmall = document.querySelector('.logo__small')
 	logoBig.addEventListener('mouseenter', function(){
-		logoSmallId.classList.toggle('hover-logo')
-	}, false)
-
+			logoSmall.classList.add('hover-logo')
+	})
 	logoBig.addEventListener('mouseleave', function(){
-		logoSmallId.classList.remove('hover-logo')
-	}, false)
+		logoSmall.classList.remove('hover-logo')
+	})
 </script>
+
+
 
 <script>
     function drop(id, btnSubCatId) {
