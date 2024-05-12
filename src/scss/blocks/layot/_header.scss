@@ -6,15 +6,18 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
+  padding: 0 30px;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: calc(100%);
   background-color: vars.$colorGreen;
+  z-index: 999;
   .logo{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 20%;
+    width: 15%;
+    margin:0 30px;
       a.logo__small svg{
         fill: vars.$colorLink;
         transition: fill .9s ease;
@@ -25,7 +28,7 @@
 
     a.logo__small.hover-logo svg{
       transition: fill .9s ease;
-      fill: rgb(0, 0, 0);
+      fill: rgb(140, 73, 73);
     }
 
       a.logo__big svg{
@@ -107,15 +110,15 @@
   }
 
 .right{
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  justify-content: space-between;
     .enter{
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      margin-left: 100px;
       svg{
         width: 40px;
         height: 40px;
@@ -123,7 +126,14 @@
         fill: vars.$colorLink;
       }
     }
-    form{
+    .form{
+      form{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
       label{
         display: none;
       }
@@ -131,7 +141,7 @@
       height: 30px;
       width: 60px;
       input{
-        margin-left: 30px;
+        //margin-left: 30px;
         background-color: transparent;
         width: 50px;
         height: 28px;
@@ -145,7 +155,7 @@
         svg{
           width: 40px;
           height: 40px;
-          margin-left: 10px;
+          margin-top: 10px;
           fill: vars.$colorLink;
         }
       }

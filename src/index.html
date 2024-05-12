@@ -11,7 +11,27 @@ description: "© Binarion"
 		@@include("html/blocks/layot/header.html", {})
 		<div class="relevant main"></div>
 		<div class="wrapper__container">
-			<img src="images/pixels/banner.jpg" alt="" />
+			<!-- Slider main container -->
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="images/pixels/banner.jpg" alt="" /></div>
+					<div class="swiper-slide"><img src="images/pixels/banner.jpg" alt="" /></div>
+					<div class="swiper-slide"><img src="images/pixels/banner.jpg" alt="" /></div>
+					...
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+
 		</div>
 		<main class="main">
 
@@ -54,13 +74,30 @@ description: "© Binarion"
 		</div>
 
 		<div class="items__container">
+
+
+
 			<div class="item">
-				<img src="images/pixels/item_photo.jpeg" alt="item" >
-				<a href="#">
-					<h2>Платье л012</h2>
-					<p>5 750 руб.</p>
+
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="images/pixels/item_photo.jpeg" alt="item" ></div>
+						<div class="swiper-slide"><img src="images/pixels/item_photo.jpeg" alt="item" ></div>
+						<div class="swiper-slide"><img src="images/pixels/item_photo.jpeg" alt="item" ></div>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+
+				<a href="/catalog/bluzy/bluzka_434/">
+					<h2>блузка</h2>
+					<p>750 ₽</p>
 				</a>
+
 			</div>
+
 			<div class="item">
 				<img src="images/pixels/item_photo.jpeg" alt="item" >
 				<a href="#">
@@ -111,10 +148,10 @@ description: "© Binarion"
 		if(!logoSmall.classList.contains('hover-logo')){
 			logoSmall.classList.add('hover-logo')
 		}
-		else{
-			logoBig.addEventListener('mouseleave', function(){
-				logoSmall.classList.remove('hover-logo')
-			})
+	})
+	logoBig.addEventListener('mouseleave', function(){
+		if(logoSmall.classList.contains('hover-logo')){
+			logoSmall.classList.remove('hover-logo')
 		}
 	})
 </script>
@@ -123,30 +160,57 @@ description: "© Binarion"
 
 <script>
     function drop(id, btnSubCatId) {
-		const element = document.getElementById(id);
-		const styles = window.getComputedStyle(element);
-		const dropDown = document.getElementById(id);
-		const btnSubCat = document.getElementById(btnSubCatId);
+		const element = document.getElementById(id)
+		const styles = window.getComputedStyle(element)
+		const dropDown = document.getElementById(id)
+		const btnSubCat = document.getElementById(btnSubCatId)
 
 		if(styles.visibility === 'hidden'){
-			element.classList.remove('hidden');
-			element.classList.toggle('visible');
+			element.classList.remove('hidden')
+			element.classList.toggle('visible')
 		}
 		else {
-			element.classList.remove('visible');
-			element.classList.toggle('hidden');
+			element.classList.remove('visible')
+			element.classList.toggle('hidden')
 		}
 		document.addEventListener('click', (e) => {
-			const isOutsideClick = !dropDown.contains(e.target);
-			const btnCatClick = !btnSubCat.contains(e.target);
+			const isOutsideClick = !dropDown.contains(e.target)
+			const btnCatClick = !btnSubCat.contains(e.target)
 			if ( isOutsideClick ) {
 				if( btnCatClick ) {
-					element.classList.remove('visible');
-					element.classList.toggle('hidden');
+					element.classList.remove('visible')
+					element.classList.toggle('hidden')
 				}
 			}
 		});
     }
+</script>
+
+<script>
+	const swiper = new Swiper('.swiper', {
+
+		// Optional parameters
+		loop: true,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		autoplay: {
+			delay: 5000,
+		},
+	});
 </script>
 
 </html>
